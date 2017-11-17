@@ -1,4 +1,5 @@
 class PaymentsController < ApplicationController
+    class PaymentsController < ApplicationController
   before_action :authenticate_user!
 
   def create
@@ -19,7 +20,7 @@ class PaymentsController < ApplicationController
     begin
       charge = Stripe::Charge.create(
         amount: @product.price * 100,
-        currency: "$",
+        currency: "eur",
         source: token,
         description: @product.name,
         receipt_email: @user.email,
