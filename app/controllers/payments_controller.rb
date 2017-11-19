@@ -19,7 +19,7 @@ class PaymentsController < ApplicationController
     begin
       charge = Stripe::Charge.create(
         amount: @product.price * 100,
-        currency: "eur",
+        currency: "usd",
         source: token,
         description: @product.name,
         receipt_email: @user.email,
@@ -28,7 +28,7 @@ class PaymentsController < ApplicationController
         if charge.paid
           Order.create(
             user_id: @user.id,
-            product_id: params[:product_id],
+            product_id: @product.id,
             total: @product.price * 100,
             )
           flash[:notice] = "Thank you for purchasing #{@product.name}!"
