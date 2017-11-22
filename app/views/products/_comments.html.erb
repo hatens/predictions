@@ -1,6 +1,6 @@
 <div class="product-reviews">
+  <h4>Latest customers reviews :</h4>
     <% @comments.each do |comment| %>
-      <h4>Latest customers reviews :</h4>
       <%= render comment %>
     <% end %>
     <%= will_paginate @comments %>
