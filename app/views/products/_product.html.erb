@@ -1,3 +1,4 @@
+<% cache product do %>
 <div class="col-sm-4 col-md-4">
   <div class="one-prod">
     <h3>
@@ -22,9 +23,10 @@
     <p>
       $ <%= product.price %>
     </p>
-    
+
     <%= link_to 'Show', product , class: "btn btn-default" %>
     <%= link_to 'Edit', edit_product_path(product) , class: "btn btn-default"  %>
     <%= link_to 'Destroy', product, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-default"  %>
   </div>
 </div><!-- /col -->
+<% end %>
