@@ -88,4 +88,14 @@ Rails.application.configure do
 
   # Do not dump schema after migrations.
   config.active_record.dump_schema_after_migration = false
+  
+  config.cache_store = :dalli_store,
+                    (ENV["mc3.dev.ec2.memcachier.com:11211"] || "").split(","),
+                    {:username => ENV["7202DB"],
+                     :password => ENV["C9322D86CBCB53F27AEA6CA5CA0AFA71"],
+                     :failover => true,
+                     :socket_timeout => 1.5,
+                     :socket_failure_delay => 0.2,
+                     :down_retry_delay => 60
+                    }
 end
