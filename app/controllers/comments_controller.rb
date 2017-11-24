@@ -6,7 +6,7 @@ class CommentsController < ApplicationController
     @user = current_user
     respond_to do |format|
       if @comment.save
-        #ActionCable.server.broadcast 'product_channel', comment: @comment, average_rating: @comment.product.average_rating
+        ActionCable.server.broadcast 'product_channel', comment: @comment, average_rating: @comment.product.average_rating
         format.html { redirect_to @product, notice: 'Review was created successfully.' }
         format.json { render :show, status: :created, location: @product }
         format.js
@@ -31,4 +31,3 @@ end
     end
 
 end
-
