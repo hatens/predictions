@@ -44,8 +44,9 @@
     <%= render partial: "comments" %>
     
     <br>
-
+<% if current_user && current_user.admin? %>
     <%= link_to 'Edit', edit_product_path(@product) , class: "btn btn-default" %>
+<% end %>
     <%= link_to 'Back', products_path, class: "btn btn-default" %>
   </div>   
 </article>
