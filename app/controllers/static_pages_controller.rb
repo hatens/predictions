@@ -3,9 +3,7 @@ class StaticPagesController < ApplicationController
     
   end
 
-  def landing_page
-    @products = Product.last(4)
-  end
+  
 
   def thank_you
     @name = params[:name]

@@ -1,0 +1,33 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Betting Tips</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Date</th>
+      <th>Time</th>
+      <th>Gameid</th>
+      <th>Tips</th>
+      <th colspan="4"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @betting_tips.each do |betting_tip| %>
+      <tr>
+        <td><%= betting_tip.date %></td>
+        <td><%= betting_tip.time %></td>
+        <td><%= betting_tip.gameid %></td>
+        <td><%= betting_tip.Tips %></td>
+        <td><%= link_to 'Show', betting_tip %></td>
+        <td><%= link_to 'Edit', edit_betting_tip_path(betting_tip) %></td>
+        <td><%= link_to 'Destroy', betting_tip, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Betting Tip', new_betting_tip_path %>

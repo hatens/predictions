@@ -10,35 +10,15 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171116152302) do
+ActiveRecord::Schema.define(version: 20180325145120) do
 
-  create_table "comments", force: :cascade do |t|
-    t.integer "user_id"
-    t.text "body"
-    t.integer "rating"
-    t.integer "product_id"
+  create_table "betting_tips", force: :cascade do |t|
+    t.string "date"
+    t.string "time"
+    t.integer "gameid"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["product_id"], name: "index_comments_on_product_id"
-    t.index ["user_id"], name: "index_comments_on_user_id"
-  end
-
-  create_table "orders", force: :cascade do |t|
-    t.integer "user_id"
-    t.integer "product_id"
-    t.float "total"
-    t.index ["product_id"], name: "index_orders_on_product_id"
-    t.index ["user_id"], name: "index_orders_on_user_id"
-  end
-
-  create_table "products", force: :cascade do |t|
-    t.string "name"
-    t.text "description"
-    t.string "image_url"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.string "colour"
-    t.integer "price"
+    t.string "Tips"
   end
 
   create_table "users", force: :cascade do |t|

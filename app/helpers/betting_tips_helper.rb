@@ -1,0 +1,2 @@
+module BettingTipsHelper
+end

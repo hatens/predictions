@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Bikes Berlin</title>
+    <title>ScorePredictor</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
@@ -21,14 +21,13 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
               </button>
-              <a href="#index" class="navbar-brand">Bike Berlin</a>
+              <a href="#index" class="navbar-brand">ScorePredictor</a>
             </div>
             <div class="collapse navbar-collapse" id="navbar-collapse">
               <ul class="nav navbar-nav navbar-right">
-                <li><%= link_to 'Products', products_path %></li>
+                <% if current_user %><li><%= link_to 'Betting Tips', betting_tips_path %></li><% end %>
               <li><%= link_to 'About', static_pages_about_path %></li>
               <li><%= link_to 'Contact', static_pages_contact_path %></li>
-              <li><%= link_to 'Orders', orders_path %></li>
                 <li>
                 <% if user_signed_in? %>
                   <%= link_to('Logout', destroy_user_session_path, :method => :delete) %>
@@ -78,8 +77,8 @@
 
 
               <div class="cover-text">
-                <h2>We are the Bike Berlin </h2>
-                <p>Our bikes never miss out </p>
+                <h2>ScorePredictor</h2>
+                <p>Home of best betting  odds </p>
               </div>
         </div>
         <article>
@@ -90,11 +89,10 @@
           <div class="container">
             <div class="row">
               <div class="col-md-9 col-sm-8 col-xs-5">
-                <p>&copy; Bike Berlin 2017 </p>
+                <p>&copy; ScorePredictor  (C) 2018</p>
               </div>
             </div> 
           </div>
         </footer> 
   </body>
 </html>
-

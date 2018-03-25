@@ -1,0 +1,23 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Date:</strong>
+  <%= @betting_tip.date %>
+</p>
+
+<p>
+  <strong>Time:</strong>
+  <%= @betting_tip.time %>
+</p>
+
+<p>
+  <strong>Gameid:</strong>
+  <%= @betting_tip.gameid %>
+</p>
+<p>
+  <strong>Tips:</strong>
+  <%= @betting_tip.Tips %>
+</p>
+
+<%= link_to 'Edit', edit_betting_tip_path(@betting_tip) %> |
+<%= link_to 'Back', betting_tips_path %>
