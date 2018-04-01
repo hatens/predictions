@@ -10,15 +10,18 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180325145120) do
+ActiveRecord::Schema.define(version: 20180401121602) do
 
-  create_table "betting_tips", force: :cascade do |t|
+  create_table "bet_tips", force: :cascade do |t|
     t.string "date"
     t.string "time"
     t.integer "gameid"
+    t.string "visitteam"
+    t.string "odds"
+    t.string "selection"
+    t.string "hometeam"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.string "Tips"
   end
 
   create_table "users", force: :cascade do |t|

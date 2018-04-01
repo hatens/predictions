@@ -1,0 +1,2 @@
+class BetTip < ApplicationRecord
+end

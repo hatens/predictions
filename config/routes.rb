@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  resources :betting_tips
+  resources :bet_tips
   devise_for :users
   resources :products do
   resources :comments

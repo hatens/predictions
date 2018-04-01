@@ -27,17 +27,28 @@
   </div>
   <div class="used-bike col-md-4 col-sm-4 col-xs-12" >
     <h4>Our Latest Wins</h4>
-    <table style="width:100%">
-  <tr>
-    <th>Gameid</th>
-    <th>Tips</th> 
-    <th>Time</th>
-  </tr>
-  <tr>
-    <td>2548</td>
-    <td>2x1</td> 
-    <td>19:00</td>
-  </tr>
+    <table>
+  <thead>
+    <tr>
+      <th><span class="glyphicon glyphicon glyphicon-calendar"></span></th>
+      <th><span class="glyphicon glyphicon glyphicon-time"></span></th>
+      <th>GAME ID</th>
+      <th>TEAMS</th>
+      <th><span class="glyphicon glyphicon glyphicon-ok"></span></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @bet_tips.each do |bet_tip| %>
+      <tr>
+        <td><%= bet_tip.date %></td>
+        <td><%= bet_tip.time %></td>
+        <td><%= bet_tip.gameid %></td>
+        <td><%= bet_tip.hometeam %> vS <%= bet_tip.visitteam %></td>
+        <td><%= bet_tip.selection %></td>
+      </tr>
+    <% end %>
+  </tbody>
 </table>
   </div>
 </article>
@@ -50,15 +61,30 @@
 <div class="banner container-fluid">
   <h2>TODAY FREE TIPS</h2>
 </div>
-<table style="width:100%">
-  <tr>
-<th>Gameid</th>
-    <th>Tips</th> 
-    <th>Time</th>
-  </tr>
-  <tr>
-    <td>2548</td>
-    <td>2x1</td> 
-    <td>19:00</td>
-  </tr>
+<table>
+  <thead>
+    <tr>
+      <th><span class="glyphicon glyphicon glyphicon-calendar"></span></th>
+      <th><span class="glyphicon glyphicon glyphicon-time"></span></th>
+      <th>GAME ID</th>
+      <th>HOME TEAM</th>
+      <th>ODDS</th>
+      <th>VISITING TEAM</th>
+      <th>SELECTION</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @bet_tips.each do |bet_tip| %>
+      <tr>
+        <td><%= bet_tip.date %></td>
+        <td><%= bet_tip.time %></td>
+        <td><%= bet_tip.gameid %></td>
+        <td><%= bet_tip.hometeam %></td>
+        <td><%= bet_tip.odds %></td>
+        <td><%= bet_tip.visitteam %></td>
+        <td><%= bet_tip.selection %></td>
+      </tr>
+    <% end %>
+  </tbody>
 </table>

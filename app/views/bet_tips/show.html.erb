@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Date:</strong>
+  <%= @bet_tip.date %>
+</p>
+
+<p>
+  <strong>Time:</strong>
+  <%= @bet_tip.time %>
+</p>
+
+<p>
+  <strong>Gameid:</strong>
+  <%= @bet_tip.gameid %>
+</p>
+
+<p>
+  <strong>Visiting Team:</strong>
+  <%= @bet_tip.visitteam %>
+</p>
+
+<p>
+  <strong>Home Team:</strong>
+  <%= @bet_tip.hometeam %>
+</p>
+
+<p>
+  <strong>Odds:</strong>
+  <%= @bet_tip.odds %>
+</p>
+
+<p>
+  <strong>Selection:</strong>
+  <%= @bet_tip.selection %>
+</p>
+
+<%= link_to 'Edit', edit_bet_tip_path(@bet_tip) %> |
+<%= link_to 'Back', bet_tips_path %>

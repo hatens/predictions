@@ -1,0 +1,52 @@
+<%= form_with(model: bet_tip, local: true) do |form| %>
+  <% if bet_tip.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(bet_tip.errors.count, "error") %> prohibited this bet_tip from being saved:</h2>
+
+      <ul>
+      <% bet_tip.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :date %>
+    <%= form.text_field :date, id: :bet_tip_date %>
+  </div>
+
+  <div class="field">
+    <%= form.label :time %>
+    <%= form.text_field :time, id: :bet_tip_time %>
+  </div>
+
+  <div class="field">
+    <%= form.label :gameid %>
+    <%= form.number_field :gameid, id: :bet_tip_gameid %>
+  </div>
+
+  <div class="field">
+    <%= form.label :hometeam %>
+    <%= form.text_field :hometeam, id: :bet_tip_hometeam %>
+  </div>
+  
+  <div class="field">
+    <%= form.label :visitteam %>
+    <%= form.text_field :visitteam, id: :bet_tip_visitteam %>
+  </div>
+
+  <div class="field">
+    <%= form.label :odds %>
+    <%= form.text_field :odds, id: :bet_tip_odds %>
+  </div>
+
+  <div class="field">
+    <%= form.label :selection %>
+    <%= form.text_field :selection, id: :bet_tip_selection %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
