@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :blogs
   resources :bet_tips
   devise_for :users
   resources :products do

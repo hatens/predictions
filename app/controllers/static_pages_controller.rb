@@ -6,8 +6,8 @@ class StaticPagesController < ApplicationController
   def landing_page
     @bet_tips = BetTip.all
   end
-
-
+  
+ 
   
 
   def thank_you

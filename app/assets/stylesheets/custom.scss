@@ -13,3 +13,7 @@ td, th {
 tr:nth-child(even) {
     background-color: #dddddd;
 }
+
+.cover {
+    background-image: image-url("dep.jpg");
+}
