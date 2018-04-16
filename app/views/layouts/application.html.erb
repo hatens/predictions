@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>ScorePredictor</title>
+    <title>RealBets254 | </title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
@@ -11,7 +11,7 @@
     <%= csrf_meta_tags %>
   </head>
 
-  <body data-spy="spyscroll" data-target=".navbar-default">
+  <body>
     <nav class="navbar navbar-inverse navbar-fixed-top"><!--  Nav  -->
           <div class="container-fluid">
             <div class="navbar-header">
@@ -21,7 +21,7 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
               </button>
-              <a href="/" class="navbar-brand">ScorePredictor</a>
+              <a href="/" class="navbar-brand">RealBets254</a>
             </div>
             <div class="collapse navbar-collapse" id="navbar-collapse">
               <ul class="nav navbar-nav navbar-right">
@@ -50,20 +50,12 @@
                       </ul>       
                   <% end %>
                 </li>
-                <li>
-                    <%= form_tag("/bet_tips", method: "get", class: "SearchFormSidenav" ) do  %>
-                    <%= text_field_tag(:q,nil,:placeholder => "search ScorePredictor", :class=>"form-control") %>
-                    <!--<%= submit_tag("Go", :class =>"btn btn-outline-warning") %>-->
-                  <% end %>
-                </li>
+                
               </ul>
               
             </div>
           </div>
         </nav>
-        
-          
-          <div class="cover">
           <% if notice %>  
             <p id="notice" class="alert alert-info">
               <%= notice %>
@@ -74,25 +66,18 @@
               <%= alert %>
             </p>
           <% end %>
-
-
-              <div class="cover-text">
-                <h2>ScorePredictor</h2>
-                <p>Home of best betting  odds </p>
-              </div>
-        </div>
-        <article>
           
+          <div class="alert alert-info alert-dismissible" role="alert">
+  <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+  <strong>Beta Version!</strong> Better check yourself, you're not looking too goodThis application is running on a beta version version 1.0 is to be released soon!!!!!
+</div>
+</div>
           <%= yield %>
-        </article>
-        <footer class="footer">
-          <div class="container">
-            <div class="row">
-              <div class="col-md-9 col-sm-8 col-xs-5">
-                <p>&copy; ScorePredictor  (C) 2018</p>
-              </div>
-            </div> 
-          </div>
-        </footer> 
+        <!-- <li>
+                    <%= form_tag("/bet_tips", method: "get", class: "SearchFormSidenav" ) do  %>
+                    <%= text_field_tag(:q,nil,:placeholder => "Search...", :class=>"form-control") %>
+                    <!--<%= submit_tag("Go", :class =>"btn btn-outline-warning") %>-->
+                  <% end %>
+                </li>
   </body>
 </html>
