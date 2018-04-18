@@ -1,50 +1,23 @@
 <header class="masthead text-center text-white d-flex">
       <div class="container my-auto">
         <div class="row">
-          <div class="col-lg-10 mx-auto">
+          <div class="col-12 mx-auto">
             <h1 class="text-uppercase">
               <strong>BETTING CHAMPS</strong>
             </h1>
-            <h2 class="text-uppercase">use realbets254</h2>
+            <h2 class="text-uppercase"><strong>use <%= image_tag("logo.png", :alt => "Realbets254 logo") %></strong</h2>
             <hr>
           </div>
-          <div class="col-lg-8 mx-auto">
-            <p class="text-faded mb-5">Start Bootstrap can help you build better websites using the Bootstrap CSS framework! Just download your template and start going, no strings attached!</p>
-            <p><%= form_tag("/bet_tips", method: "get", class: "SearchFormSidenav" ) do  %>
-               <%= text_field_tag(:q,nil,:placeholder => "Search...", :class=>"form-control") %>
+          <div class="col-12 mx-auto">
+            <p class="text-faded mb-5">Welcome to the ultimate leader of bet predictions. Get all your betting prediction analysis from one site that willserve you with nothing but the best tips.Dedicated team that works day and night to ensure winning for you.</p>
+            ><%= form_tag("/bet_tips", method: "get", class: "SearchFormSidenav" ) do  %>
+               <%= text_field_tag(:q,nil,:placeholder => "Search for top playing games today | Anything on Realbets254", :class=>"form-control") %>
                <!--<%= submit_tag("Go", :class =>"btn btn-outline-warning") %>-->
-               <% end %></p>
+               <% end %>
           </div>
-        </div>
-      </div>
-    </header>
-<article class="container">
-
-<article class="container-fluid category">
-  <div class="new-bike col-md-4 col-sm-4 col-xs-12" >
-    <h4>REAL BETS OFFERS</h4>
-    <br>
-    <p>6+ ODDS @KSH. 50</p>
-    <p>14+ ODDS @ KSH. 100</p>
-    <p>29+ VIP ODDS@ KSH. 250</p>
-    <p>MIDWEEK JACKPOT PREDICTIONS @ KSH.200</p>
-    <p>MEGA JACKPOT PREDICTIONS@ KSH. 200</p>
-  </div>
-  <div class="used-bike col-md-4 col-sm-4 col-xs-12" >
-    <h4>Start winning Now</h4>
-    <br>
-    <p>1. On your Safaricom phone go to the <b>M-PESA menu</b></p>
-    <p>2. Select <b>Lipa Na M-PESA</b></p>
-    <p>3. Select <b>Buy Goods and Services</b></p>
-    <p>4. Enter the Till Number <b>837760</b>.</p>
-    <%= image_tag("lnp.png", class: "img-responsive") %>
-    <p>5. Enter the Amount <b>KSH.50</b> (Get Predictions Via SMS) OR <b>KSH.300</b> (1 Week) OR <b>KSH. 750</b> (2 Weeks ) OR <b>KSH. 1500</b> (1 Month) OR <b>KSH. 4500</b> (3 Months) OR<b> KSH 6500</b> (6 Months) </p>
-    <p>6. You will receive 2 messages; the second one will have your <b>Username</b> and <b>password</b></p>
-    <p>7. Login to access our tips</p>
-  </div>
-  <div class="used-bike col-md-4 col-sm-4 col-xs-12" >
-    <h4>Our Latest Wins</h4>
-    <table>
+          <div class="col-12 mx-auto">
+            <h4>Our Latest Wins</h4>
+    <table class="steelBlueCols">
   <thead>
     <tr>
       <th><span class="glyphicon glyphicon glyphicon-calendar"></span></th>
@@ -67,42 +40,9 @@
     <% end %>
   </tbody>
 </table>
-  </div>
-</article>
-
-<article class="container product">
-  <p></p>
-</article>
-
-</article>
-<div class="banner container-fluid">
-  <h2>TODAY FREE TIPS</h2>
-</div>
-<table>
-  <thead>
-    <tr>
-      <th><span class="glyphicon glyphicon glyphicon-calendar"></span></th>
-      <th><span class="glyphicon glyphicon glyphicon-time"></span></th>
-      <th>GAME ID</th>
-      <th>HOME TEAM</th>
-      <th>ODDS</th>
-      <th>VISITING TEAM</th>
-      <th>SELECTION</th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @bet_tips.each do |bet_tip| %>
-      <tr>
-        <td><%= bet_tip.date %></td>
-        <td><%= bet_tip.time %></td>
-        <td><%= bet_tip.gameid %></td>
-        <td><%= bet_tip.hometeam %></td>
-        <td><%= bet_tip.odds %></td>
-        <td><%= bet_tip.visitteam %></td>
-        <td><%= bet_tip.selection %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
-</article>
+<br>
+<a class="btn btn-primary btn-xl js-scroll-trigger" href="#about">Start Winning</a>
+          </div>
+        </div>
+      </div>
+    </header>

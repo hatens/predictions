@@ -1,6 +1,6 @@
 body {
     position: relative;
-    top: 60px;
+    top: 50px;
 }
 /* App Tables */
 
@@ -23,7 +23,7 @@ tr:nth-child(even) {
 /* App Search Form  */
 
 input[type=text] {
-    width: 130px;
+    width: 80%;
     -webkit-transition: width 0.4s ease-in-out;
     transition: width 0.4s ease-in-out;
 }
@@ -66,4 +66,8 @@ input[type=text]:focus {
 .navbar-inverse .navbar-brand:focus, .navbar-inverse .navbar-brand:hover {
     color: #000;
     background-color: transparent;
+}
+
+strong {
+    color:white;
 }
