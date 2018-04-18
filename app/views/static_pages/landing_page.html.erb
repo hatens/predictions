@@ -1,3 +1,23 @@
+<header class="masthead text-center text-white d-flex">
+      <div class="container my-auto">
+        <div class="row">
+          <div class="col-lg-10 mx-auto">
+            <h1 class="text-uppercase">
+              <strong>BETTING CHAMPS</strong>
+            </h1>
+            <h2 class="text-uppercase">use realbets254</h2>
+            <hr>
+          </div>
+          <div class="col-lg-8 mx-auto">
+            <p class="text-faded mb-5">Start Bootstrap can help you build better websites using the Bootstrap CSS framework! Just download your template and start going, no strings attached!</p>
+            <p><%= form_tag("/bet_tips", method: "get", class: "SearchFormSidenav" ) do  %>
+               <%= text_field_tag(:q,nil,:placeholder => "Search...", :class=>"form-control") %>
+               <!--<%= submit_tag("Go", :class =>"btn btn-outline-warning") %>-->
+               <% end %></p>
+          </div>
+        </div>
+      </div>
+    </header>
 <article class="container">
 
 <article class="container-fluid category">
