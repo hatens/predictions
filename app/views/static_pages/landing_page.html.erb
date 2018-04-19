@@ -34,7 +34,7 @@
         <td><%= bet_tip.date %></td>
         <td><%= bet_tip.time %></td>
         <td><%= bet_tip.gameid %></td>
-        <td><%= bet_tip.hometeam %> vS <%= bet_tip.visitteam %></td>
+        <td class="text-uppercase"><%= bet_tip.hometeam %> vS <%= bet_tip.visitteam %></td>
         <td><%= bet_tip.selection %></td>
       </tr>
     <% end %>
@@ -111,6 +111,53 @@
               <p class="text-muted mb-0">We promise your money back, in the case we don't deliver the expected results.Read our <a>REFUND POLICY</a></a></p>
             </div>
           </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <section class="bg-dark" id="about">
+      <div class="container">
+        <div class="row">
+          <div class="col-12 mx-auto text-center">
+            <h2 class="section-heading text-white">Contact Us</h2>
+            <hr class="light my-4">
+          </div>
+          <div class="col-lg-4">
+          <%= flash[:notice] %>
+
+  <%= form_tag("/static_pages/thank_you") do %>
+  <div class="row">
+    <div class="col-md-8">
+      <div class="form-group">
+        <%= label_tag :name %>
+        <%= text_field_tag :name, nil, class: "form-control", placeholder: "Enter Name" %>
+      </div>      
+      <div class="form-group">
+        <%= label_tag :email, "Email Address" %>
+        <%= text_field_tag :email, nil, class: "form-control", placeholder: "Enter Email" %>
+      </div>
+      <div class="form-group">
+        <%= label_tag :tel, "Phone Number" %>
+        <%= text_field_tag :tel, nil, class: "form-control", placeholder: "Enter Phone Number" %>
+      </div>
+      <div class="form-group">
+        <%= label_tag :message %>
+        <%= text_area_tag :message, nil, class: "form-control", placeholder: "Enter Message" %>
+      </div>      
+    </div>
+  </div>
+  <%= submit_tag "Send", class: "btn btn-default" %>   
+  <% end %>
+          </div>
+          <div class="col-lg-4">
+          <p class="text-faded mb-4"></p>
+          <h3>Get your reply within 10 mins</b></h3>
+          <p>We have a support team that will attend to all your queries in a short period of time you can contact us about:</p>
+          <li>Loss of Password or difficulty in accessing our site</li>
+          <li>Delayed delivery of bet odd messages</li>
+          <li>Your experience on our Platform</li>
+          <li>Any inquiries you may be having</li>
           </div>
         </div>
       </div>
