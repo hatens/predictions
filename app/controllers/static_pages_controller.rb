@@ -4,7 +4,7 @@ class StaticPagesController < ApplicationController
   end
   
   def landing_page
-    @bet_tips = BetTip.all
+    @bet_tips = BetTip.all.paginate(page: params[:page], per_page: 3)
   end
   
  
